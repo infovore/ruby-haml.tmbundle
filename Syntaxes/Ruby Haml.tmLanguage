@@ -33,16 +33,6 @@
 			</array>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>:javascript\n</string>
-			<key>end</key>
-			<string>^(\b)*(\.%=\-:)</string>
-			<key>include</key>
-			<string>source.js</string>
-			<key>name</key>
-			<string>javascript.block.haml</string>
-		</dict>
-		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -217,6 +207,21 @@
 				<dict>
 					<key>include</key>
 					<string>#rubyline</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^( *):javascript</string>
+			<key>end</key>
+			<string>^(?!\1 )</string>
+			<key>name</key>
+			<string>meta.section.filter.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
 				</dict>
 			</array>
 		</dict>
